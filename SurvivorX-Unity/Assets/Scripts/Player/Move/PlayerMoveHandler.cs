@@ -22,7 +22,7 @@ namespace SurvivorX.Player.Move
         
         public void Tick()
         {
-            Vector2 movement = _inputState.MoveDirection * _timeProvider.DeltaTime * 5;
+            Vector2 movement = _inputState.MoveDirection * _timeProvider.DeltaTime * _mover.MoveSpeed;
             Vector2 oldPosition = _mover.GetPosition();
             _mover.SetPosition(oldPosition + movement);
         }

@@ -4,6 +4,7 @@ namespace SurvivorX.Player.Move
 {
     public interface IMover
     {
+        float MoveSpeed { get; }
         Transform Trans { get; }
     }
 
