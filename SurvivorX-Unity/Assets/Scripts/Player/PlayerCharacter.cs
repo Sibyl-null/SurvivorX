@@ -10,13 +10,22 @@ namespace SurvivorX.Player
         [SerializeField] private float _moveSpeed;
         
         public PlayerInputState InputState { get; } = new();
-
+        
         public float MoveSpeed => _moveSpeed;
-        public Transform Trans => _trans;
-
-        private void Awake()
+        public Transform Trans
         {
-            _trans = transform;
+            get
+            {
+                if (_trans == null)
+                    _trans = transform;
+                
+                return _trans;
+            }
+        }
+
+        public void SetMoveSpeed(float speed)
+        {
+            _moveSpeed = speed;
         }
     }
 }
