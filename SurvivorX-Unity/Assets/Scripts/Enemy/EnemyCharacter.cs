@@ -1,15 +1,12 @@
-﻿using SurvivorX.Misc;
-using SurvivorX.Player.Input;
+using SurvivorX.Misc;
 using UnityEngine;
 
-namespace SurvivorX.Player
+namespace SurvivorX.Enemy
 {
-    public class PlayerCharacter : MonoBehaviour, IMover, ITransTarget
+    public class EnemyCharacter : MonoBehaviour, IMover
     {
         private Transform _trans;
         [SerializeField] private float _moveSpeed;
-        
-        public PlayerInputState InputState { get; } = new();
         
         public float MoveSpeed => _moveSpeed;
         public Transform Trans
@@ -21,13 +18,6 @@ namespace SurvivorX.Player
                 
                 return _trans;
             }
-        }
-        
-        public Vector2 Position => Trans.position;
-        
-        public void SetMoveSpeed(float speed)
-        {
-            _moveSpeed = speed;
         }
     }
 }

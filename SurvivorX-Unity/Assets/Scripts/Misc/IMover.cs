@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace SurvivorX.Player.Move
+namespace SurvivorX.Misc
 {
     public interface IMover
     {
