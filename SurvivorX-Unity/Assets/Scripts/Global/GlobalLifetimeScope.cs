@@ -1,4 +1,5 @@
-﻿using SurvivorX.Global.TimeProviders;
+﻿using SurvivorX.Global.ResLoaders;
+using SurvivorX.Global.TimeProviders;
 using VContainer;
 using VContainer.Unity;
 
@@ -9,6 +10,7 @@ namespace SurvivorX.Global
         protected override void Configure(IContainerBuilder builder)
         {
             builder.Register<ITimeProvider, TimeProvider>(Lifetime.Singleton);
+            builder.Register<IResLoader, ResLoader>(Lifetime.Singleton);
         }
     }
 }
