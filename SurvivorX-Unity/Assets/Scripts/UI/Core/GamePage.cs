@@ -16,7 +16,7 @@ namespace SurvivorX.UI.Core
         public override void OnEscape()
         {
             base.OnEscape();
-            SurvivorX.UI.Core.UIManager.Instance.ClosePage(UIInfo.PageType);
+            UIManager.Instance.ClosePage(UIInfo.PageType);
         }
     }
 }

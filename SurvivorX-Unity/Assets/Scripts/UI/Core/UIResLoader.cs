@@ -1,17 +1,15 @@
+using SurvivorX.Util.ResLoaders;
 using UIFramework.Runtime;
-using UIFramework.Runtime.ResLoader;
 using UnityEngine;
+using IResLoader = UIFramework.Runtime.ResLoader.IResLoader;
 
 namespace SurvivorX.UI.Core
 {
-    /** 替换为项目中自己的加载方式 */
     public class UIResLoader : IResLoader
     {
         public GameObject LoadAndInstantiatePrefab(string path, Transform parent)
         {
-            path = path.Replace("Assets/Resources/", "").Replace(".prefab", "");
-            
-            GameObject prefab = Resources.Load<GameObject>(path);
+            GameObject prefab = ResLoader.Instance.Load<GameObject>(path);
             if (prefab == null)
             {
                 UILogger.Warning($"[UI] Load prefab failed! {path}");
@@ -23,12 +21,13 @@ namespace SurvivorX.UI.Core
 
         public void UnLoad(string path)
         {
-            Debug.Log("UI UnLoad");
+            ResLoader.Instance.Unload(path);
         }
 
         public UIRuntimeSettings LoadSettings()
         {
-            return Resources.Load<UIRuntimeSettings>("UIRuntimeSettings");
+            return ResLoader.Instance
+                .Load<UIRuntimeSettings>("Assets/AssetBundle/UI/Settings/UIRuntimeSettings.asset");
         }
     }
 }
