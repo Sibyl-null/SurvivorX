@@ -7,6 +7,13 @@
       "dependencies": {},
       "url": "https://package.openupm.com"
     },
+    "com.sibyl.uiframework": {
+      "version": "git@gitee.com:sibyl-null/Unity-UIFramework.git?path=Repository",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {},
+      "hash": "45f9ba8ca3144a59e4c0e3ae9c9d061e9fd3bdd5"
+    },
     "com.unity.2d.animation": {
       "version": "9.1.0",
       "depth": 1,
