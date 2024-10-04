@@ -1,11 +1,11 @@
 using SurvivorX.Util.ResLoaders;
 using UIFramework.Runtime;
+using UIFramework.Runtime.ResLoader;
 using UnityEngine;
-using IResLoader = UIFramework.Runtime.ResLoader.IResLoader;
 
 namespace SurvivorX.UI.Core
 {
-    public class UIResLoader : IResLoader
+    public class UIResLoader : IUIResLoader
     {
         public GameObject LoadAndInstantiatePrefab(string path, Transform parent)
         {
