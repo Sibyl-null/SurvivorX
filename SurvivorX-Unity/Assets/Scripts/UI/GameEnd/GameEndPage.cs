@@ -1,11 +1,9 @@
 using SurvivorX.UI.Core;
-{{~ for $namespace in dep_namespace_set ~}}
-using {{ $namespace }};
-{{~ end ~}}
+using UIFramework.Runtime.Page;
 
-namespace {{ self_namespace }}
+namespace SurvivorX.UI.GameEnd
 {
-    public class {{ page_class_name }} : GamePage<{{ ui_class_name }}>
+    public class GameEndPage : GamePage<GameEndUI>
     {   
         protected override void OnInit()
         {

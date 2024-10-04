@@ -123,6 +123,11 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!20 &57054329 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 4317315403211177486, guid: 99b08a082c100493389ba6ce3238bd28, type: 3}
+  m_PrefabInstance: {fileID: 556391261}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &104477089
 GameObject:
   m_ObjectHideFlags: 0
@@ -211,7 +216,8 @@ MonoBehaviour:
   m_RequiresDepthTextureOption: 2
   m_RequiresOpaqueTextureOption: 2
   m_CameraType: 0
-  m_Cameras: []
+  m_Cameras:
+  - {fileID: 57054329}
   m_RendererIndex: -1
   m_VolumeLayerMask:
     serializedVersion: 2
