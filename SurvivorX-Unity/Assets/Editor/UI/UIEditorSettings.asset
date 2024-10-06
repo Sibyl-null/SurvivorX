@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f60568e0d72241eea108c5d53508ed19, type: 3}
   m_Name: UIEditorSettings
   m_EditorClassIdentifier: 
-  TemplateUIPrefab: {fileID: 846360921254828453, guid: 5e5e193461ceb4f90b0bdb44de5c8785, type: 3}
+  TemplateUIPrefab: {fileID: 846360921254828453, guid: a2bd696f97c9abc469987d337adfe784, type: 3}
   UIPrefabLoadFolders:
   - {fileID: 102900000, guid: b50488ca1e762ce4eb7ef4e4c9e9f5e1, type: 3}
   UIInfoFilePath: Assets/Scripts/UI/Core/UIManager_Info.cs
