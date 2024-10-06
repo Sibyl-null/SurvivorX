@@ -6,11 +6,15 @@ using System.Diagnostics;
 using UIFramework.Runtime;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 namespace SurvivorX.UI.GameEnd
 {
     public class GameEndUI : BaseUI
     {
+        public RectTransform TmpEndTrans;
+        public TextMeshProUGUI TmpEndTmp;
+        public GameObject TmpEndGo;
         public RectTransform BtnReStartTrans;
         public Image BtnReStartImg;
         public Button BtnReStartBtn;
@@ -25,8 +29,12 @@ namespace SurvivorX.UI.GameEnd
             BlackImage = GetComponent<Image>();
             Raycast = transform.Find("Raycast").GetComponent<UIRaycast>();
         
+            var TmpEnd = transform.Find("Content/TmpEnd");
             var BtnReStart = transform.Find("Content/BtnReStart");
         
+            TmpEndTrans = TmpEnd.GetComponent<RectTransform>();
+            TmpEndTmp = TmpEnd.GetComponent<TextMeshProUGUI>();
+            TmpEndGo = TmpEnd.gameObject;
             BtnReStartTrans = BtnReStart.GetComponent<RectTransform>();
             BtnReStartImg = BtnReStart.GetComponent<Image>();
             BtnReStartBtn = BtnReStart.GetComponent<Button>();

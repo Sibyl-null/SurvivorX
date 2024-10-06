@@ -333,7 +333,7 @@ GameObject:
   - component: {fileID: 2096031685929621744}
   m_Layer: 5
   m_Name: TmpEnd
-  m_TagString: Untagged
+  m_TagString: AutoField
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -629,6 +629,9 @@ MonoBehaviour:
   Content: {fileID: 5513719566188200446}
   BlackImage: {fileID: 555524594536287150}
   Raycast: {fileID: 1588816603347355857}
+  TmpEndTrans: {fileID: 2356849254288975980}
+  TmpEndTmp: {fileID: 2096031685929621744}
+  TmpEndGo: {fileID: 6341860514784834117}
   BtnReStartTrans: {fileID: 7267041971506797987}
   BtnReStartImg: {fileID: 3161307805529080110}
   BtnReStartBtn: {fileID: 1418977853250907517}

@@ -1,4 +1,6 @@
 ﻿using Cysharp.Threading.Tasks;
+using SurvivorX.UI.Core;
+using SurvivorX.UI.GameEnd;
 using UnityEngine;
 
 namespace SurvivorX.Actors
@@ -9,11 +11,13 @@ namespace SurvivorX.Actors
         
         private Transform _targetTrans;
         private Transform _transform;
+        private int _hp;
 
-        private void Awake()
+        private void Start()
         {
             _targetTrans = GameObject.FindWithTag("Player").transform;
             _transform = transform;
+            _hp = 5;
         }
 
         private void Update()
@@ -29,6 +33,17 @@ namespace SurvivorX.Actors
         public async UniTaskVoid BeHurt()
         {
             _spRenderer.color = Color.red;
+            --_hp;
+            if (_hp <= 0)
+            {
+                Destroy(gameObject);
+                UIManager.Instance.OpenPage<GameEndPage>(new GameEndPage.Arg
+                {
+                    IsWin = true
+                });
+                return;
+            }
+            
             await UniTask.Delay(300, cancellationToken: this.GetCancellationTokenOnDestroy());
             _spRenderer.color = Color.white;
         }

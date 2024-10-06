@@ -50,6 +50,9 @@ namespace SurvivorX
 
         private void GameClearActors()
         {
+            GameObject[] players = GameObject.FindGameObjectsWithTag("Player");
+            players.ForEach(Destroy);
+            
             GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
             enemies.ForEach(Destroy);
         }
