@@ -5,6 +5,7 @@
 using System;
 using UIFramework.Runtime.InfoContainer;
 using SurvivorX.UI.GameEnd;
+using SurvivorX.UI.GameRunning;
 
 namespace SurvivorX.UI.Core
 {
@@ -18,6 +19,7 @@ namespace SurvivorX.UI.Core
         private void LoadInfos()
         {
             AddInfo(typeof(GameEndPage), Settings.GetLayerOrder("Dialog"), "Assets/AssetBundle/UI/Prefabs/GameEndUI.prefab");
+            AddInfo(typeof(GameRunningPage), Settings.GetLayerOrder("Dialog"), "Assets/AssetBundle/UI/Prefabs/GameRunningUI.prefab");
         }
     }
 }

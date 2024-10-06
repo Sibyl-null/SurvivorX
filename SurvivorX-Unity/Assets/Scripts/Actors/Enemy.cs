@@ -1,6 +1,4 @@
 ﻿using Cysharp.Threading.Tasks;
-using SurvivorX.UI.Core;
-using SurvivorX.UI.GameEnd;
 using UnityEngine;
 
 namespace SurvivorX.Actors
@@ -13,9 +11,9 @@ namespace SurvivorX.Actors
         private Transform _transform;
         private int _hp;
 
-        private void Start()
+        public void Init(Transform targetTrans)
         {
-            _targetTrans = GameObject.FindWithTag("Player").transform;
+            _targetTrans = targetTrans;
             _transform = transform;
             _hp = 5;
         }
@@ -34,13 +32,12 @@ namespace SurvivorX.Actors
         {
             _spRenderer.color = Color.red;
             --_hp;
+            
             if (_hp <= 0)
             {
                 Destroy(gameObject);
-                UIManager.Instance.OpenPage<GameEndPage>(new GameEndPage.Arg
-                {
-                    IsWin = true
-                });
+                Global.Exp.Value++;
+                GameStateController.Instance.MakeGameWin();
                 return;
             }
             

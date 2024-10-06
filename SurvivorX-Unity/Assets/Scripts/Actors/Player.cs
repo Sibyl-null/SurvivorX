@@ -1,6 +1,4 @@
 using QFramework;
-using SurvivorX.UI.Core;
-using SurvivorX.UI.GameEnd;
 using UnityEngine;
 
 namespace SurvivorX.Actors
@@ -31,10 +29,7 @@ namespace SurvivorX.Actors
         private void OnHurtBoxEnter(Collider2D box)
         {
             Destroy(gameObject);
-            UIManager.Instance.OpenPage<GameEndPage>(new GameEndPage.Arg
-            {
-                IsWin = false
-            });
+            GameStateController.Instance.MakeGameFail();
         }
     }
 }
