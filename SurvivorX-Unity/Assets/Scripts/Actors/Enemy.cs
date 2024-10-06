@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace SurvivorX
+namespace SurvivorX.Actors
 {
     public class Enemy : MonoBehaviour
     {

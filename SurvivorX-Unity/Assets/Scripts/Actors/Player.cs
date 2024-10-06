@@ -1,7 +1,7 @@
 using QFramework;
 using UnityEngine;
 
-namespace SurvivorX
+namespace SurvivorX.Actors
 {
     public class Player : MonoBehaviour
     {
