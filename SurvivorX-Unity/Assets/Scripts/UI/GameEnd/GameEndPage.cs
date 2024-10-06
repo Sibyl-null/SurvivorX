@@ -1,5 +1,4 @@
 using SurvivorX.UI.Core;
-using UIFramework.Runtime.Page;
 
 namespace SurvivorX.UI.GameEnd
 {
@@ -8,16 +7,13 @@ namespace SurvivorX.UI.GameEnd
         protected override void OnInit()
         {
             base.OnInit();
+            UI.BtnReStartBtn.onClick.AddListener(OnReStartClick);
         }
 
-        protected override void OnPrepare(IPageArg arg = null)
+        private void OnReStartClick()
         {
-            base.OnPrepare(arg);
-        }
-
-        protected override void OnClear()
-        {
-            base.OnClear();
+            Launcher.Instance.GameStart();
+            UIManager.Instance.ClosePage<GameEndPage>();
         }
     }
 }

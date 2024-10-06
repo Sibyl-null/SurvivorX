@@ -1,3 +1,4 @@
+using QFramework;
 using SurvivorX.UI.Core;
 using SurvivorX.Util.Defines;
 using SurvivorX.Util.ResLoaders;
@@ -11,6 +12,13 @@ namespace SurvivorX
         private readonly IResLoader _resLoader = ResLoader.Instance;
         [SerializeField] private Canvas _uiRootCanvas;
         
+        public static Launcher Instance { get; private set; }
+
+        private void Awake()
+        {
+            Instance = this;
+        }
+
         private void Start()
         {
             InitUIManager();
@@ -20,6 +28,7 @@ namespace SurvivorX
         private void OnDestroy()
         {
             UIManager.Destroy();
+            Instance = null;
         }
 
         private void InitUIManager()
@@ -28,13 +37,21 @@ namespace SurvivorX
             UIManager.Create(_uiRootCanvas);
         }
 
-        private void GameStart()
+        public void GameStart()
         {
+            GameClearActors();
+            
             GameObject player = _resLoader.Load<GameObject>(AssetPathDefine.Player);
             Instantiate(player);
 
             GameObject enemy = _resLoader.Load<GameObject>(AssetPathDefine.Enemy);
             Instantiate(enemy);
+        }
+
+        private void GameClearActors()
+        {
+            GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
+            enemies.ForEach(Destroy);
         }
     }
 }
