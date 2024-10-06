@@ -34,13 +34,13 @@ namespace SurvivorX
             CurState = GameState.GameRunning;
             GameClearActors();
             
-            GameObject player = _resLoader.Load<GameObject>(AssetPathDefine.Player);
-            Object.Instantiate(player);
+            GameObject playerPrefab = _resLoader.Load<GameObject>(AssetPathDefine.Player);
+            GameObject playerGo = Object.Instantiate(playerPrefab);
 
-            GameObject enemy = _resLoader.Load<GameObject>(AssetPathDefine.Enemy);
-            enemy.Instantiate()
+            GameObject enemyPrefab = _resLoader.Load<GameObject>(AssetPathDefine.Enemy);
+            enemyPrefab.Instantiate()
                 .GetComponent<Enemy>()
-                .Init(player.transform);
+                .Init(playerGo.transform);
             
             UIManager.Instance.OpenPage<GameRunningPage>();
         }

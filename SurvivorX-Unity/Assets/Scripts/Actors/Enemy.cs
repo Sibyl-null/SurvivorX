@@ -23,9 +23,9 @@ namespace SurvivorX.Actors
             if (_targetTrans == null)
                 return;
             
-            Vector2 direction = (_targetTrans.position - _transform.position).normalized;
-            Vector2 movement = direction * Time.deltaTime * 2;
-            _transform.position = (Vector2)_transform.position + movement;
+            Vector3 direction = (_targetTrans.position - _transform.position).normalized;
+            Vector3 movement = direction * Time.deltaTime * 2;
+            _transform.position += movement;
         }
 
         public async UniTaskVoid BeHurt()
