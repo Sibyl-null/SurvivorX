@@ -1,4 +1,4 @@
-﻿namespace SurvivorX.Global.TimeProviders
+﻿namespace SurvivorX.Infrastructure.TimeProviders
 {
     public interface ITimeProvider
     {

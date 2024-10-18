@@ -1,4 +1,4 @@
-using SurvivorX.Global.TimeProviders;
+using SurvivorX.Infrastructure.TimeProviders;
 using SurvivorX.Misc;
 using UnityEngine;
 using VContainer;

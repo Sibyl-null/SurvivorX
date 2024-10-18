@@ -1,4 +1,4 @@
-namespace SurvivorX.Global.ResLoaders
+namespace SurvivorX.Infrastructure.ResLoaders
 {
     public interface IResLoader
     {

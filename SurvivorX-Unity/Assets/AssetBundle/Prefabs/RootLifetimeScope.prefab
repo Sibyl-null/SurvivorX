@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5732811977241355145}
   - component: {fileID: 5256274649667387660}
   m_Layer: 0
-  m_Name: GlobalLifetimeScope
+  m_Name: RootLifetimeScope
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

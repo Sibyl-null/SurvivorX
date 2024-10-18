@@ -1,7 +1,7 @@
 ﻿using JetBrains.Annotations;
 using UnityEngine;
 
-namespace SurvivorX.Global.TimeProviders
+namespace SurvivorX.Infrastructure.TimeProviders
 {
     [UsedImplicitly]
     public class TimeProvider : ITimeProvider

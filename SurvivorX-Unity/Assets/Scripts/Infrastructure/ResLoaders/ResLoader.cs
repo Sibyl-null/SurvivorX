@@ -1,7 +1,7 @@
 ﻿using JetBrains.Annotations;
 using UnityEngine;
 
-namespace SurvivorX.Global.ResLoaders
+namespace SurvivorX.Infrastructure.ResLoaders
 {
     [UsedImplicitly]
     public class ResLoader : IResLoader
