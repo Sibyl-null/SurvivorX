@@ -1,5 +1,4 @@
 ﻿using SurvivorX.Battle.Common;
-using SurvivorX.Battle.Player.Input;
 using UnityEngine;
 
 namespace SurvivorX.Battle.Player
@@ -9,8 +8,7 @@ namespace SurvivorX.Battle.Player
         private Transform _trans;
         [SerializeField] private float _moveSpeed;
         
-        public PlayerInputState InputState { get; } = new();
-        
+        public Vector2 Position => Trans.position;
         public float MoveSpeed => _moveSpeed;
         public Transform Trans
         {
@@ -22,8 +20,6 @@ namespace SurvivorX.Battle.Player
                 return _trans;
             }
         }
-        
-        public Vector2 Position => Trans.position;
         
         public void SetMoveSpeed(float speed)
         {

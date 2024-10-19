@@ -12,9 +12,9 @@ namespace SurvivorX.Battle.Player
         
         protected override void Configure(IContainerBuilder builder)
         {
-            builder.RegisterInstance(_playerCharacter.InputState);
             builder.RegisterComponent(_playerCharacter).AsImplementedInterfaces();
-            
+
+            builder.Register<PlayerInputState>(Lifetime.Scoped);
             builder.RegisterEntryPoint<PlayerInputHandler>();
             builder.RegisterEntryPoint<PlayerMoveHandler>();
         }
