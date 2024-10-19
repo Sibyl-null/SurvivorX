@@ -243,8 +243,9 @@ MonoBehaviour:
     TypeName: SurvivorX.Battle.BattleLifetimeScope
   autoRun: 1
   autoInjectGameObjects: []
-  _enemyCharacter: {fileID: 5183179761440748237}
   _enemyStat: {fileID: 11400000, guid: e8ddf11793975ac4c87a638a939a4805, type: 2}
+  _enemyCharacter: {fileID: 5183179761440748237}
+  _touchSkill: {fileID: 6826488463129368314}
 --- !u!114 &5183179761440748237
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -257,4 +258,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f683018f1d71524990e54cbf0eddaa6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _moveSpeed: 2
