@@ -5,7 +5,7 @@ using UnityEngine;
 using VContainer;
 using VContainer.Unity;
 
-namespace SurvivorX.Player.Move
+namespace SurvivorX.Battle.Player.Move
 {
     public class PlayerMoveHandler : ITickable
     {

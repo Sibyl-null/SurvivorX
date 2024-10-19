@@ -4,7 +4,7 @@ using UnityEngine;
 using VContainer;
 using VContainer.Unity;
 
-namespace SurvivorX.Enemy.Move
+namespace SurvivorX.Battle.Enemy.Move
 {
     public class EnemyMoveHandler : ITickable
     {
@@ -13,11 +13,10 @@ namespace SurvivorX.Enemy.Move
         private readonly ITransTarget _transTarget;
 
         [Inject]
-        public EnemyMoveHandler(ITimeProvider timeProvider, IMover mover, ITransTarget transTarget)
+        public EnemyMoveHandler(ITimeProvider timeProvider, IMover mover)
         {
             _timeProvider = timeProvider;
             _mover = mover;
-            _transTarget = transTarget;
         }
         
         public void Tick()

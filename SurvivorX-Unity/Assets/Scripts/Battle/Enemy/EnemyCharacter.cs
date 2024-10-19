@@ -1,7 +1,7 @@
 using SurvivorX.Misc;
 using UnityEngine;
 
-namespace SurvivorX.Enemy
+namespace SurvivorX.Battle.Enemy
 {
     public class EnemyCharacter : MonoBehaviour, IMover
     {

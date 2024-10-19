@@ -1,10 +1,10 @@
+using SurvivorX.Battle.Player.Move;
 using SurvivorX.Player.Input;
-using SurvivorX.Player.Move;
 using UnityEngine;
 using VContainer;
 using VContainer.Unity;
 
-namespace SurvivorX.Player
+namespace SurvivorX.Battle.Player
 {
     public class PlayerLifetimeScope : LifetimeScope
     {

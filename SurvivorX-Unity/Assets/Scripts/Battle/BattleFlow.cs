@@ -1,4 +1,5 @@
-using SurvivorX.Enemy;
+using SurvivorX.Battle.Enemy;
+using SurvivorX.Battle.Player;
 using SurvivorX.Infrastructure.ResLoaders;
 using SurvivorX.Player;
 using SurvivorX.Util.Defines;
@@ -24,7 +25,7 @@ namespace SurvivorX.Battle
                 .Instantiate()
                 .SetPosition(Vector3.zero)
                 .GetComponent<PlayerCharacter>();
-
+            
             _resLoader.Load<GameObject>(AssetPathDefine.EnemyPrefabPath)
                 .Instantiate()
                 .SetPosition(new Vector3(5, 5, 0))

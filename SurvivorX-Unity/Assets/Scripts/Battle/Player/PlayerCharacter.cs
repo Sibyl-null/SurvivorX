@@ -2,7 +2,7 @@
 using SurvivorX.Player.Input;
 using UnityEngine;
 
-namespace SurvivorX.Player
+namespace SurvivorX.Battle.Player
 {
     public class PlayerCharacter : MonoBehaviour, IMover, ITransTarget
     {
