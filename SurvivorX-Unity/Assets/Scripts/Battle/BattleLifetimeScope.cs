@@ -23,7 +23,7 @@ namespace SurvivorX.Battle
                 .SetPosition(Vector3.zero)
                 .GetComponent<PlayerCharacter>();
             
-            builder.RegisterInstance(player).As<ITransTarget>();
+            builder.RegisterInstance(player).As<IPlayerFacade>();
             
             _resLoader.Load<GameObject>(AssetPathDefine.EnemyPrefabPath)
                 .Instantiate()

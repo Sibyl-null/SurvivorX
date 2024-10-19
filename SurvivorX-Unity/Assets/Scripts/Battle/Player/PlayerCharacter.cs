@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace SurvivorX.Battle.Player
 {
-    public class PlayerCharacter : MonoBehaviour, IMover, ITransTarget
+    public class PlayerCharacter : MonoBehaviour, IMover, IPlayerFacade
     {
         private Transform _trans;
         [SerializeField] private float _moveSpeed;

@@ -1,3 +1,4 @@
+using SurvivorX.Battle.Player;
 using SurvivorX.Infrastructure.TimeProviders;
 using SurvivorX.Misc;
 using UnityEngine;
@@ -10,23 +11,23 @@ namespace SurvivorX.Battle.Enemy.Move
     {
         private readonly ITimeProvider _timeProvider;
         private readonly IMover _mover;
-        private readonly ITransTarget _transTarget;
+        private readonly IPlayerFacade _playerFacade;
 
         [Inject]
-        public EnemyMoveHandler(ITimeProvider timeProvider, IMover mover, ITransTarget transTarget)
+        public EnemyMoveHandler(ITimeProvider timeProvider, IMover mover, IPlayerFacade playerFacade)
         {
             _timeProvider = timeProvider;
             _mover = mover;
-            _transTarget = transTarget;
+            _playerFacade = playerFacade;
         }
         
         public void Tick()
         {
-            if (_transTarget == null)
+            if (_playerFacade == null)
                 return;
             
             Vector2 selfPosition = _mover.GetPosition();
-            Vector2 dir = (_transTarget.Position - selfPosition).normalized;
+            Vector2 dir = (_playerFacade.Position - selfPosition).normalized;
             Vector2 movement = dir * _mover.MoveSpeed * _timeProvider.DeltaTime;
             _mover.SetPosition(selfPosition + movement);
         }

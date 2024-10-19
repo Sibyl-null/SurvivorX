@@ -1,8 +1,8 @@
 ﻿using UnityEngine;
 
-namespace SurvivorX.Misc
+namespace SurvivorX.Battle.Player
 {
-    public interface ITransTarget
+    public interface IPlayerFacade
     {
         Vector2 Position { get; }
     }
