@@ -7,7 +7,7 @@ namespace SurvivorX.Battle.Player
     {
         private Transform _trans;
         [SerializeField] private float _moveSpeed;
-        
+
         public Vector2 Position => Trans.position;
         public float MoveSpeed => _moveSpeed;
         public Transform Trans

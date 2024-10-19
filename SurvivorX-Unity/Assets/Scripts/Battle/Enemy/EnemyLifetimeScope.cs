@@ -12,7 +12,7 @@ namespace SurvivorX.Battle.Enemy
         protected override void Configure(IContainerBuilder builder)
         {
             builder.RegisterComponent(_enemyCharacter).AsImplementedInterfaces();
-            builder.RegisterEntryPoint<EnemyMoveHandler>();
+            builder.RegisterEntryPoint<EnemyMoveHandler>(Lifetime.Scoped);
         }
     }
 }
