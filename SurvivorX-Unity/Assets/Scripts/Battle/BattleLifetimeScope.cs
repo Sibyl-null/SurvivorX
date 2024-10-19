@@ -1,4 +1,3 @@
-using SurvivorX.Battle.Enemy;
 using SurvivorX.Battle.Player;
 using SurvivorX.Infrastructure.ResLoaders;
 using SurvivorX.Util.Defines;
@@ -17,17 +16,16 @@ namespace SurvivorX.Battle
         {
             _resLoader = Parent.Container.Resolve<IResLoader>();
 
-            PlayerCharacter player = _resLoader.Load<GameObject>(AssetPathDefine.PlayerPrefabPath)
+            IPlayerFacade playerFacade = _resLoader.Load<GameObject>(AssetPathDefine.PlayerPrefabPath)
                 .Instantiate()
                 .SetPosition(Vector3.zero)
-                .GetComponent<PlayerCharacter>();
+                .GetComponent<IPlayerFacade>();
             
-            builder.RegisterInstance(player).As<IPlayerFacade>();
-            
+            builder.RegisterInstance(playerFacade).As<IPlayerFacade>();
+
             _resLoader.Load<GameObject>(AssetPathDefine.EnemyPrefabPath)
                 .Instantiate()
-                .SetPosition(new Vector3(5, 5, 0))
-                .GetComponent<EnemyCharacter>();
+                .SetPosition(new Vector3(5, 5, 0));
         }
     }
 }

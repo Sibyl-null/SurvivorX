@@ -1,23 +1,15 @@
 using SurvivorX.Battle.Common;
+using SurvivorX.Config;
 using UnityEngine;
+using VContainer;
 
 namespace SurvivorX.Battle.Enemy
 {
     public class EnemyCharacter : MonoBehaviour, IMover
     {
-        private Transform _trans;
-        [SerializeField] private float _moveSpeed;
+        [Inject] private readonly EnemyStatConfigSo _enemyStat;
         
-        public float MoveSpeed => _moveSpeed;
-        public Transform Trans
-        {
-            get
-            {
-                if (_trans == null)
-                    _trans = transform;
-                
-                return _trans;
-            }
-        }
+        public float MoveSpeed => _enemyStat.MoveSpeed;
+        public Transform Trans => transform;
     }
 }
