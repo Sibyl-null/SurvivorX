@@ -2,7 +2,7 @@
 using VContainer;
 using VContainer.Unity;
 
-namespace SurvivorX.Player.Input
+namespace SurvivorX.Battle.Player.Input
 {
     public class PlayerInputHandler : IInitializable, ITickable
     {

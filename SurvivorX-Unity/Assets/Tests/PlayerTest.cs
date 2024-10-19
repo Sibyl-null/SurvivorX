@@ -2,11 +2,10 @@ using FluentAssertions;
 using NSubstitute;
 using NUnit.Framework;
 using SurvivorX.Battle.Player;
+using SurvivorX.Battle.Player.Input;
 using SurvivorX.Battle.Player.Move;
 using SurvivorX.Infrastructure.TimeProviders;
 using SurvivorX.Misc;
-using SurvivorX.Player;
-using SurvivorX.Player.Input;
 using UnityEngine;
 
 namespace Tests

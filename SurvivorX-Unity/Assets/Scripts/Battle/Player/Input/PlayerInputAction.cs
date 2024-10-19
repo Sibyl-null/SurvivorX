@@ -15,7 +15,7 @@ using System.Collections.Generic;
 using UnityEngine.InputSystem;
 using UnityEngine.InputSystem.Utilities;
 
-namespace SurvivorX.Player.Input
+namespace SurvivorX.Battle.Player.Input
 {
     public partial class @PlayerInputAction: IInputActionCollection2, IDisposable
     {

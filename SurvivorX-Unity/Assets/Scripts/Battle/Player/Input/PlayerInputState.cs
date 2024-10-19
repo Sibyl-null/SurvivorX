@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace SurvivorX.Player.Input
+namespace SurvivorX.Battle.Player.Input
 {
     public class PlayerInputState
     {

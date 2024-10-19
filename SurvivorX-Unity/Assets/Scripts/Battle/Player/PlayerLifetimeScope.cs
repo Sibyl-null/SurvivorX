@@ -1,5 +1,5 @@
+using SurvivorX.Battle.Player.Input;
 using SurvivorX.Battle.Player.Move;
-using SurvivorX.Player.Input;
 using UnityEngine;
 using VContainer;
 using VContainer.Unity;

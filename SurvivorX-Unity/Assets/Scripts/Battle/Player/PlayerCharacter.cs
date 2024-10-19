@@ -1,5 +1,5 @@
-﻿using SurvivorX.Misc;
-using SurvivorX.Player.Input;
+﻿using SurvivorX.Battle.Player.Input;
+using SurvivorX.Misc;
 using UnityEngine;
 
 namespace SurvivorX.Battle.Player
