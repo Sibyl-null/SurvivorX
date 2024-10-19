@@ -244,6 +244,7 @@ MonoBehaviour:
   autoRun: 1
   autoInjectGameObjects: []
   _enemyCharacter: {fileID: 5183179761440748237}
+  _enemyStat: {fileID: 11400000, guid: e8ddf11793975ac4c87a638a939a4805, type: 2}
 --- !u!114 &5183179761440748237
 MonoBehaviour:
   m_ObjectHideFlags: 0

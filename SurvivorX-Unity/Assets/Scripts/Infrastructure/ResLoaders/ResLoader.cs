@@ -11,7 +11,6 @@ namespace SurvivorX.Infrastructure.ResLoaders
 #if UNITY_EDITOR
             return UnityEditor.AssetDatabase.LoadAssetAtPath<T>(path);
 #endif
-            return null;
         }
 
         public void Unload(string path)

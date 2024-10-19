@@ -243,6 +243,7 @@ MonoBehaviour:
     TypeName: SurvivorX.Battle.BattleLifetimeScope
   autoRun: 1
   autoInjectGameObjects: []
+  _playerStat: {fileID: 11400000, guid: 59d5ba4795b470f40bba938946feeb7c, type: 2}
   _playerCharacter: {fileID: 3661094556118355221}
   _hurtBox: {fileID: 871752768779999852}
 --- !u!114 &3661094556118355221
