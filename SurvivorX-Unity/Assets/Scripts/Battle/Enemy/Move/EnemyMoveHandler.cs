@@ -13,10 +13,11 @@ namespace SurvivorX.Battle.Enemy.Move
         private readonly ITransTarget _transTarget;
 
         [Inject]
-        public EnemyMoveHandler(ITimeProvider timeProvider, IMover mover)
+        public EnemyMoveHandler(ITimeProvider timeProvider, IMover mover, ITransTarget transTarget)
         {
             _timeProvider = timeProvider;
             _mover = mover;
+            _transTarget = transTarget;
         }
         
         public void Tick()

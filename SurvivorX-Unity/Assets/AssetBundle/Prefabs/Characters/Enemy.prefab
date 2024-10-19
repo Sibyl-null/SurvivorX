@@ -159,7 +159,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   parentReference:
-    TypeName: 
+    TypeName: SurvivorX.Battle.BattleLifetimeScope
   autoRun: 1
   autoInjectGameObjects: []
   _enemyCharacter: {fileID: 5183179761440748237}

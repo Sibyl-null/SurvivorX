@@ -1,30 +1,29 @@
 using SurvivorX.Battle.Enemy;
 using SurvivorX.Battle.Player;
 using SurvivorX.Infrastructure.ResLoaders;
-using SurvivorX.Player;
+using SurvivorX.Misc;
 using SurvivorX.Util.Defines;
 using SurvivorX.Util.FluentExtensions;
 using UnityEngine;
 using VContainer;
+using VContainer.Unity;
 
 namespace SurvivorX.Battle
 {
-    public class BattleFlow
+    public class BattleLifetimeScope : LifetimeScope
     {
-        private readonly IResLoader _resLoader;
+        private IResLoader _resLoader;
 
-        [Inject]
-        public BattleFlow(IResLoader resLoader)
+        protected override void Configure(IContainerBuilder builder)
         {
-            _resLoader = resLoader;
-        }
+            _resLoader = Parent.Container.Resolve<IResLoader>();
 
-        public void StartBattle()
-        {
             PlayerCharacter player = _resLoader.Load<GameObject>(AssetPathDefine.PlayerPrefabPath)
                 .Instantiate()
                 .SetPosition(Vector3.zero)
                 .GetComponent<PlayerCharacter>();
+            
+            builder.RegisterInstance(player).As<ITransTarget>();
             
             _resLoader.Load<GameObject>(AssetPathDefine.EnemyPrefabPath)
                 .Instantiate()
