@@ -1,7 +1,6 @@
 using SurvivorX.Battle.Enemy;
 using SurvivorX.Battle.Player;
 using SurvivorX.Infrastructure.ResLoaders;
-using SurvivorX.Misc;
 using SurvivorX.Util.Defines;
 using SurvivorX.Util.FluentExtensions;
 using UnityEngine;

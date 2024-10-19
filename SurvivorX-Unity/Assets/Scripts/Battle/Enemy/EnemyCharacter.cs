@@ -1,4 +1,4 @@
-using SurvivorX.Misc;
+using SurvivorX.Battle.Common;
 using UnityEngine;
 
 namespace SurvivorX.Battle.Enemy

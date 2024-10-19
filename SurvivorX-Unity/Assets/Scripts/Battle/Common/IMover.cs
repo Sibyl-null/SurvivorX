@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace SurvivorX.Misc
+namespace SurvivorX.Battle.Common
 {
     public interface IMover
     {
